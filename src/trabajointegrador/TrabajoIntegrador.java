@@ -18,9 +18,10 @@ public class TrabajoIntegrador {
         Path tablaResultados = Paths.get("archivoscsv\\resultados.csv");
         Path tablaPronostico = Paths.get("archivoscsv\\pronostico.csv");
 
+        
+        boolean primeraLinea = true;
         for (String linea : Files.readAllLines(tablaResultados)) {
-            if (linea.startsWith("Equipo")) {//Ver algun metodo para saltar la primera linea
-            } else {
+            if (!primeraLinea) {
 
                 String[] datos = linea.split(",");
 
@@ -37,12 +38,12 @@ public class TrabajoIntegrador {
                 
                 partidos.add(partido);
             }
+            primeraLinea = false;
         }
 
-         
+        primeraLinea = true; 
         for (String linea : Files.readAllLines(tablaPronostico)) {
-            if (linea.startsWith("Equipo")) {//Ver algun metodo para saltar la primera linea
-            } else {
+            if (!primeraLinea) {
 
                 String[] datos = linea.split(",");
 
@@ -66,6 +67,7 @@ public class TrabajoIntegrador {
 
                 pronosticos.add(pronostico);
             }
+            primeraLinea = false;
         }
 
         int puntaje = 0;
