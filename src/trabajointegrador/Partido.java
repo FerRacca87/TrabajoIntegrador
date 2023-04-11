@@ -22,7 +22,7 @@ public class Partido {
         return equipo1;
     }
 
-    public void setEquipo1(Equipo equipo1) {
+   public void setEquipo1(Equipo equipo1) {
         this.equipo1 = equipo1;
     }
 
@@ -30,7 +30,7 @@ public class Partido {
         return equipo2;
     }
 
-    public void setEquipo2(Equipo equipo2) {
+   public void setEquipo2(Equipo equipo2) {
         this.equipo2 = equipo2;
     }
 
@@ -38,17 +38,17 @@ public class Partido {
         return golesEquipo1;
     }
 
-    public void setGolesEquipo1(int golesEquipo1) {
+   /*public void setGolesEquipo1(int golesEquipo1) {
         this.golesEquipo1 = golesEquipo1;
-    }
+    }*/
 
     public int getGolesEquipo2() {
         return golesEquipo2;
     }
 
-    public void setGolesEquipo2(int golesEquipo2) {
+    /*public void setGolesEquipo2(int golesEquipo2) {
         this.golesEquipo2 = golesEquipo2;
-    }
+    }*/
 
     public ResultadoEnum getResultado() {
         return resultado;

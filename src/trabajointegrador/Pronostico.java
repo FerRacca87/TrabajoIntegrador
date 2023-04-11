@@ -2,6 +2,11 @@
 package trabajointegrador;
 
 //@author Fernando Racca
+
+import java.io.IOException;
+import static java.nio.file.Files.readAllLines;
+import java.nio.file.Path;
+
  
 public class Pronostico {
     
@@ -29,11 +34,17 @@ public class Pronostico {
     
     
     
+    /*public ResultadoEnum resultadoPronostico(Path tabla) throws IOException{
+        for(String linea : readAllLines(tabla)){
+            
+        }
+        
+        
+        return resultado;
+    }*/
     
     
-    
-    public static int calcularPuntajePronostico(Partido partido, Pronostico pronostico){
-        int puntaje = 0;
+    public static int calcularPuntajePronostico(int puntaje, Partido partido, Pronostico pronostico){
         if(partido.getResultado() == pronostico.getResultado()){
             puntaje += 1;
         }
